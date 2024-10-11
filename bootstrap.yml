@@ -1114,6 +1114,7 @@ packages:
         quiet: true
 
   - name: lil
+    architecture: '@OPTION:arch@'
     from_source: lil
     tools_required:
       - system-gcc
@@ -1293,6 +1294,7 @@ packages:
 
   # Deprecated in favor of openssl
   - name: libressl
+    architecture: '@OPTION:arch@'
     source:
       subdir: 'ports'
       git: 'https://github.com/libressl-portable/portable.git'
@@ -1388,6 +1390,7 @@ packages:
         quiet: true
 
   - name: kmscube
+    architecture: '@OPTION:arch@'
     source:
       rolling_version: true
       version: '0.0pl@ROLLING_ID@'
@@ -1831,6 +1834,7 @@ packages:
       - args: ['cp', '@SOURCE_ROOT@/extrafiles/kmscon.conf', '@THIS_COLLECT_DIR@/etc/kmscon/']
 
   - name: runit
+    architecture: '@OPTION:arch@'
     stability_level: broken
     source:
       subdir: ports
