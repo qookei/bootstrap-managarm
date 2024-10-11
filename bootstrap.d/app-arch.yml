@@ -193,6 +193,7 @@ packages:
         quiet: true
 
   - name: lz4
+    labels: [aarch64]
     architecture: '@OPTION:arch@'
     metadata:
       summary: Extremely Fast Compression algorithm

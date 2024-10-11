@@ -1080,6 +1080,7 @@ packages:
           DESTDIR: '@THIS_COLLECT_DIR@'
 
   - name: libmnl
+    labels: [aarch64]
     architecture: '@OPTION:arch@'
     metadata:
       summary: libmnl is a minimalistic user-space library oriented to Netlink developers
