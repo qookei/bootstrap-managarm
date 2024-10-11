@@ -49,8 +49,6 @@ packages:
       - system-gcc
       - virtual: pkgconfig-for-target
         triple: '@OPTION:arch-triple@'
-      - host-mlibc
-      - host-gobject-introspection
       - host-python
       - host-glib
       - host-vala
@@ -58,7 +56,6 @@ packages:
       - mlibc
       - glib
       - libgcrypt
-      - gobject-introspection
       - libxslt
     revision: 2
     configure:
@@ -71,7 +68,7 @@ packages:
           - '--wrap-mode=nofallback'
           - '--sysconfdir=/etc'
           - '-Dgtk_doc=false'
-          - '-Dintrospection=true'
+          - '-Dintrospection=false'
           - '-Dvapi=true'
           - '-Dmanpage=false'
           - '@THIS_SOURCE_DIR@'

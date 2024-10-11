@@ -507,7 +507,6 @@ packages:
       - host-python
       - host-gobject-introspection
       - host-glib
-      - host-mlibc
     pkgs_required:
       - mlibc
       - glib

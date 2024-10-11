@@ -312,14 +312,11 @@ packages:
       - system-gcc
       - virtual: pkgconfig-for-target
         triple: "@OPTION:arch-triple@"
-      - host-mlibc
-      - host-gobject-introspection
       - host-python
       - host-glib
     pkgs_required:
       - mlibc
       - glib
-      - gobject-introspection
     revision: 2
     configure:
       - args:
@@ -608,8 +605,6 @@ packages:
       - host-pkg-config
       - virtual: pkgconfig-for-target
         triple: "@OPTION:arch-triple@"
-      - host-mlibc
-      - host-gobject-introspection
       - host-python
       - host-glib
     pkgs_required:
@@ -620,7 +615,6 @@ packages:
       - freetype
       - cairo
       - icu
-      - gobject-introspection
     revision: 11
     configure:
       - args:
@@ -638,7 +632,7 @@ packages:
         - '-Dicu=enabled'
         - '-Dfreetype=enabled'
         - '-Dcairo=enabled'
-        - '-Dintrospection=enabled'
+        - '-Dintrospection=disabled'
         - '-Ddocs=disabled'
         - '-Dtests=disabled' # Disabled due to a linking error
         - '@THIS_SOURCE_DIR@'

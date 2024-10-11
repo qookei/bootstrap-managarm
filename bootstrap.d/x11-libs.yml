@@ -110,8 +110,6 @@ packages:
       - host-pkg-config
       - virtual: pkgconfig-for-target
         triple: "@OPTION:arch-triple@"
-      - host-mlibc
-      - host-gobject-introspection
       - host-python
       - host-glib
     pkgs_required:
@@ -121,7 +119,6 @@ packages:
       - libpng
       - shared-mime-info
       - libx11
-      - gobject-introspection
     revision: 7
     configure:
       - args:
@@ -129,7 +126,7 @@ packages:
         - '--cross-file'
         - '@SOURCE_ROOT@/scripts/meson-@OPTION:arch-triple@.cross-file'
         - '--prefix=/usr'
-        - '-Dintrospection=enabled'
+        - '-Dintrospection=disabled'
         - '-Dman=false'
         - '-Dgtk_doc=false'
         - '-Ddocs=false'
@@ -282,8 +279,6 @@ packages:
         triple: "@OPTION:arch-triple@"
       - wayland-scanner
       - host-glib
-      - host-mlibc
-      - host-gobject-introspection
       - host-python
     pkgs_required:
       - mlibc
@@ -325,7 +320,7 @@ packages:
         - '--libdir=lib'
         - '--buildtype=debugoptimized'
         - '-Dprint_backends=file'
-        - '-Dintrospection=true' # Gobject introspection is broken again
+        - '-Dintrospection=false' # Gobject introspection is broken again
         - '-Dx11_backend=true'
         - '-Dbroadway_backend=true'
         - '-Dwayland_backend=true'
@@ -1982,8 +1977,6 @@ packages:
       - host-glib
       - virtual: pkgconfig-for-target
         triple: "@OPTION:arch-triple@"
-      - host-mlibc
-      - host-gobject-introspection
       - host-python
     pkgs_required:
       - mlibc
@@ -2007,7 +2000,7 @@ packages:
         - '@SOURCE_ROOT@/scripts/meson-@OPTION:arch-triple@.cross-file'
         - '--prefix=/usr'
         - '--buildtype=release'
-        - '-Dintrospection=enabled'
+        - '-Dintrospection=disabled'
         - '--wrap-mode=nofallback'
         - '@THIS_SOURCE_DIR@'
         environ:

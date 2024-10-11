@@ -269,8 +269,6 @@ packages:
       - host-pkg-config
       - virtual: pkgconfig-for-target
         triple: "@OPTION:arch-triple@"
-      - host-mlibc
-      - host-gobject-introspection
       - host-python
       - host-vala
       - host-glib
@@ -283,7 +281,6 @@ packages:
       - brotli
       - libpsl
       - zlib
-      - gobject-introspection
     configure:
       - args:
         - 'meson'
@@ -293,7 +290,7 @@ packages:
         - '--prefix=/usr'
         - '--wrap-mode=nofallback'
         - '--buildtype=debugoptimized'
-        - '-Dintrospection=enabled'
+        - '-Dintrospection=disabled'
         - '-Dinstalled_tests=false'
         - '-Dsysprof=disabled'
         - '-Dvapi=enabled'

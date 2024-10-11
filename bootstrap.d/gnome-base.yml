@@ -15,7 +15,6 @@ packages:
       version: '42.0'
     tools_required:
       - system-gcc
-      - host-gobject-introspection
       - host-libtool
       - host-pkg-config
       - virtual: pkgconfig-for-target
