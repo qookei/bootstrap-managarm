@@ -55,12 +55,7 @@ packages:
         - '@THIS_SOURCE_DIR@/configure'
         - '--host=@OPTION:arch-triple@'
         - '--prefix=/usr'
-        - '--enable-uefi-ia32'
-        - '--enable-uefi-x86-64'
-        - '--enable-uefi-cd'
-        - '--enable-bios'
-        - '--enable-bios-cd'
-        - '--enable-bios-pxe'
+        - '--enable-uefi-aarch64'
         - 'TOOLCHAIN_FOR_TARGET=@OPTION:arch-triple@'
     build:
       - args: ['make', '-j@PARALLELISM@']

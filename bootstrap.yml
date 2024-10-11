@@ -62,8 +62,11 @@ general:
         config_toml: 'extrafiles/config.toml'
 
 repositories:
-    tool_archives: 'https://builds.managarm.org/repos/tools/managarm/latest'
-    xbps: 'https://repos.managarm.org/repos/amd64/'
+    tool_archives: 'https://builds.managarm.org/repos/tools/managarm_aarch64/latest'
+    xbps: 'https://builds.managarm.org/repos/packages/managarm_aarch64/rolling/'
+
+site_architectures:
+  - aarch64
 
 # TODO: We currently don't support computed options or anything of that sort,
 #       so we just define the architecture, and the triple as 2 options
@@ -1906,7 +1909,7 @@ tasks:
       -pgpt \
       -text2 \
       -llimine \
-      -be \
+      -e \
       $elevation
     environ:
       'LIMINE_PATH': '@BUILD_ROOT@/tools/host-limine/share/limine'
